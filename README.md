@@ -1,8 +1,7 @@
 # Android_ClipCam
 Android_ClipCam with SK CloudCam API 공모전
 
-# ScreenShot
-
+## ScreenShot
 <div>
 <img width="200 src="https://user-images.githubusercontent.com/37185394/54339374-feb77800-4677-11e9-9844-70a77608cb63.jpg"/>
 <img width="200 src="https://user-images.githubusercontent.com/37185394/54339376-feb77800-4677-11e9-97ba-c9c190715768.jpg"/>
