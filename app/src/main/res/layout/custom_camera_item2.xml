@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Index TextView-->
+            <ImageView
+                android:id="@+id/im_camera_list_img"
+                android:layout_marginLeft="14dp"
+                android:layout_width="107dp"
+                android:layout_height="60dp"/>
+
+
+                    <!-- CameraInformation TextView-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:text="카메라이름"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#000000"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                        android:layout_marginLeft="10dp"/>
+                                    <View
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1" />
+                                    <TextView
+                                        android:id="@+id/tv_camera_list_item_name"
+                                        android:text="입구1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                        android:layout_marginRight="10dp"/>
+                            </LinearLayout>
+                            <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+                            <TextView
+                                android:text="그룹"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000000"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:layout_marginLeft="10dp"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+                            <TextView
+                                android:id="@+id/tv_camera_list_item_group"
+                                android:text="jhjoo92"
+                                android:textColor="#000000"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:layout_marginRight="10dp"/>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+                            <TextView
+                                android:text="카메라상태"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="#000000"
+
+                                android:layout_marginLeft="10dp"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:id="@+id/camera_list_item_status"
+                                android:text="녹화중"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000000"
+                                android:textSize="15dp"
+                                android:layout_marginRight="10dp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+
+                            <ImageButton
+                                android:id="@+id/camera_list_item_live_bt"
+                                android:background="@drawable/select_list_live_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"/>
+
+                            <ImageButton
+                                android:id="@+id/camera_list_item_playback_bt"
+                                android:background="@drawable/select_list_playback_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+             </LinearLayout>
+        </LinearLayout>
+</LinearLayout>

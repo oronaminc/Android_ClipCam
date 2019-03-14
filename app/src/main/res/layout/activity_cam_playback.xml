@@ -1,0 +1,159 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CameraPlayBackActivity">
+
+    <SurfaceView
+        android:id="@+id/svPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true">
+    </SurfaceView>
+
+    <RelativeLayout
+        android:id="@+id/text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_cam_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:text="카메라 : "/>
+
+        <TextView
+            android:id="@+id/cam_name2"
+            android:layout_toRightOf="@id/tv_cam_name2"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:text=""/>
+        <TextView
+            android:id="@+id/tv_cam_group_name2"
+            android:layout_toRightOf="@id/cam_name2"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:text="소유주 : "/>
+        <TextView
+            android:id="@+id/cam_group_name2"
+            android:layout_toRightOf="@id/tv_cam_group_name2"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:text=""/>
+        <TextView
+            android:id="@+id/tv_cam_play_date2"
+            android:layout_toRightOf="@id/cam_group_name2"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:text="재생일자  : "/>
+        <TextView
+            android:id="@+id/cam_play_date2"
+            android:layout_toRightOf="@id/tv_cam_play_date2"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/tv_cam_play_time2"
+            android:layout_toRightOf="@id/cam_play_date2"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:text="재생시간  : "/>
+        <TextView
+            android:id="@+id/cam_play_time2"
+            android:layout_toRightOf="@id/tv_cam_play_time2"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/tv_cam_play_scal2"
+            android:layout_below="@id/tv_cam_name2"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:text="배속  : "/>
+        <TextView
+            android:id="@+id/cam_play_scal2"
+            android:layout_below="@id/cam_name2"
+            android:layout_toRightOf="@id/tv_cam_play_scal2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:text=""/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/button_layout">
+            <ImageButton
+                android:id="@+id/play_back_start_bt"
+                android:layout_gravity="center"
+                android:background="@drawable/select_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageButton
+                android:id="@+id/play_back_stop_bt"
+                android:layout_gravity="center"
+                android:background="@drawable/select_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageButton
+                android:id="@+id/play_back_date_bt"
+                android:layout_gravity="center"
+                android:background="@drawable/select_calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageButton
+                android:id="@+id/play_back_time_bt"
+                android:layout_gravity="center"
+                android:background="@drawable/select_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageButton
+                android:id="@+id/play_back_scal_bt"
+                android:layout_gravity="center"
+                android:background="@drawable/select_scal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/play_back_progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"/>
+
+
+</FrameLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "73797875586",
+    "firebase_url": "https://cloudcam-sk.firebaseio.com",
+    "project_id": "cloudcam-sk",
+    "storage_bucket": "cloudcam-sk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73797875586:android:f6f05bfb2a897d18",
+        "android_client_info": {
+          "package_name": "com.tisquare.params"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "73797875586-1l5n4lcadh8c5tjpuah0f4g35o7jc4nk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tisquare.params",
+            "certificate_hash": "8896e5c1e044b7f38d1301e754f580e17479a013"
+          }
+        },
+        {
+          "client_id": "73797875586-m2v7vjfpn6uhjj2p9pr5ras0tep7mc5i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3ElHdgg3DhoyrKCzrLzkusZ_cFks9DX4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "73797875586-m2v7vjfpn6uhjj2p9pr5ras0tep7mc5i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
