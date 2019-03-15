@@ -35,7 +35,7 @@
                                         android:text="카메라이름"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:textColor="#000000"
+                                        android:textColor="#5c5c5c"
                                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                         android:layout_marginLeft="10dp"/>
                                     <View
@@ -47,7 +47,7 @@
                                         android:text="입구1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:textColor="#000000"
+                                        android:textColor="#5c5c5c"
                                         android:textSize="15dp"
                                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                         android:layout_marginRight="10dp"/>
@@ -61,7 +61,7 @@
                                 android:text="그룹"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="#000000"
+                                android:textColor="#5c5c5c"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                                 android:layout_marginLeft="10dp"/>
                             <View
@@ -71,7 +71,7 @@
                             <TextView
                                 android:id="@+id/tv_camera_list_item_group"
                                 android:text="jhjoo92"
-                                android:textColor="#000000"
+                                android:textColor="#5c5c5c"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="15dp"
@@ -89,7 +89,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                                android:textColor="#000000"
+                                android:textColor="#5c5c5c"
 
                                 android:layout_marginLeft="10dp"/>
                             <View
@@ -102,7 +102,7 @@
                                 android:text="녹화중"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="#000000"
+                                android:textColor="#5c5c5c"
                                 android:textSize="15dp"
                                 android:layout_marginRight="10dp"/>
                         </LinearLayout>
@@ -111,21 +111,19 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
                             android:orientation="horizontal">
 
 
                             <ImageButton
                                 android:id="@+id/camera_list_item_live_bt"
-                                android:background="@drawable/select_list_live_btn"
+                                android:background="@drawable/button_1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginRight="20dp"/>
+                                android:layout_marginRight="5dp"/>
 
                             <ImageButton
                                 android:id="@+id/camera_list_item_playback_bt"
-                                android:background="@drawable/select_list_playback_btn"
+                                android:background="@drawable/button_2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
                         </LinearLayout>

@@ -23,6 +23,20 @@ public class ApplicationClass extends Application {
      *
      */
 
+    /*
+    public String username;
+    public String email;
+
+    public ApplicationClass() {
+
+    }
+
+    public ApplicationClass(String username, String email) {
+        this.username = username;
+        this.email = email;
+    }
+    */
+
     private String loginCom = "login.t_view_platform";
     private String logOutCom = "logout.t_view_platform";
     private String sessionCheckCom = "heartbeat.t_view_platform";
@@ -41,6 +55,10 @@ public class ApplicationClass extends Application {
     private String cameraDownloadListCom = "cameras_rec_download_history.t_view_platform";
     private String cameraDownloadCom = "cameras_rec_download.t_view_platform";
     private String cameraDownloadInfoCom = "cameras_rec_download_req_detail.t_view_platform";
+
+
+
+
 
     public String getPlayBackCom() {
         return playBackCom;

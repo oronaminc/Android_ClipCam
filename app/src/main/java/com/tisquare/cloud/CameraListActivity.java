@@ -1,9 +1,11 @@
 package com.tisquare.cloud;
 
 
-import android.app.Activity;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.content.Intent;
@@ -30,6 +32,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.firebase.ui.auth.data.model.User;
 import com.skbb.api.skApi;
 import com.skbb.callback.OnTaskCompleted;
 import com.tisquare.adapter.cameraListAdapter;
@@ -42,11 +45,16 @@ import org.json.JSONObject;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
-public class CameraListActivity extends AppCompatActivity implements Callback, View.OnClickListener{
+public class CameraListActivity extends AppCompatActivity implements  Callback, View.OnClickListener {
 
 
+
+
+    private DatabaseReference mDatabase;
 
     ApplicationClass applicationClass;
     String TAG = getClass().getName().toString();
@@ -74,6 +82,7 @@ public class CameraListActivity extends AppCompatActivity implements Callback, V
     public ArrayList<cameraDetailListData> cmDetailListArr = new ArrayList<cameraDetailListData>();
 
     public static sendListHandler sendHandler;
+
 
 
     skApi skApi;
@@ -129,6 +138,7 @@ public class CameraListActivity extends AppCompatActivity implements Callback, V
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
 
 
@@ -199,7 +209,7 @@ public class CameraListActivity extends AppCompatActivity implements Callback, V
                             camName = cmDetailListArr.get(0).getCamName();
                             liveUrl2 = cmDetailListArr.get(0).getLiveUrl();
                             camGroupName = cmDetailListArr.get(0).getSharingGroupName();
-
+                            Toast.makeText(getApplicationContext(),camNum, Toast.LENGTH_SHORT).show();
                             camAdapter.notifyDataSetChanged();
                         }else{
                             testToast = json.getString("resultMsg");
@@ -224,51 +234,8 @@ public class CameraListActivity extends AppCompatActivity implements Callback, V
 
 
         initBtn();
-
-        /*
-        skApi = new skApi();
-        skApi.setListener(new OnTaskCompleted() {
-            @Override
-            public void onTaskCompleted(JSONObject jsonObject, String s) {
-
-                if(apiName.equals("logOut")){
-                    Log.e(TAG , "logOut  callBack   !!!!!!!!!!!!!!!!!!!!! "    );
-
-
-                    try{
-                        JSONObject json;
-                        json = new JSONObject(jsonObject.toString());
-                        String result = json.getString("status");
-                        //Login Success
-
-                        if(result.equals("200")){
-                        }else{
-                            logOutResult = json.getString("message");
-                            Toast.makeText(getBaseContext(),logOutResult,Toast.LENGTH_SHORT).show();
-                        }
-
-                    }catch (JSONException je){
-                        Log.e(TAG,"JSoneExeption" + je);
-                    }
-
-                }else{
-                    Toast.makeText(getBaseContext(),"Network상태가 불안합니다\n재시도 해주세요.",Toast.LENGTH_SHORT).show();
-                    // onRetry(5);
-                }
-
-
-            }
-        }, apiName);
-
-        */
-
-        if (mRPlayer!=null) {
-            mRPlayer.release();
-            mRPlayer = null;
-        }
-        //cam_name.setText(camName);
-        //cam_group_name.setText(camGroupName);
         playMedia();
+
 
 
         ImageView insta = (ImageView) findViewById(R.id.insta);
@@ -301,9 +268,21 @@ public class CameraListActivity extends AppCompatActivity implements Callback, V
             }
         });
 
+
         download.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View view){
+                mDatabase.child("connect").setValue(true);
+                mDatabase.child("camid").setValue("galaxy7");
+
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://firebasestorage.googleapis.com/v0/b/cloudcam-sk.appspot.com/o/ClipCam_2019-03-14-13-42-41.mp4?alt=media&token=3fd56799-71df-4455-9be3-c0d404e3b330"));
+                intent.setPackage("com.android.chrome");
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
+
+                //writeNewUser("1234","NEW","newnewenw@naver.com");
                 Toast.makeText(getApplicationContext(), "다운로드 중입니다" , Toast.LENGTH_SHORT).show();
 
                 //skApi.getPlaybackDownLoad(applicationClass, applicationClass.getPlayBackCom(), applicationClass.getProjectId(),
@@ -320,9 +299,13 @@ public class CameraListActivity extends AppCompatActivity implements Callback, V
                 TEXT.setVisibility(View.VISIBLE);
             }
         });
-
-
     }
+    private void writeNewUser(String userId, String name, String email) {
+        mDatabase.child("users").child(userId).child("username").setValue(name);
+    }
+
+
+
     void initBtn(){
 
         camera_search_btn = (ImageButton) findViewById(R.id.camera_search_btn);
@@ -349,20 +332,6 @@ public class CameraListActivity extends AppCompatActivity implements Callback, V
 
         mSv2 = (SurfaceView)findViewById(R.id.live_svPlayer2);
         mSv2.getHolder().addCallback(this);
-
-        /*
-        mSv2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if(layFlag){
-                    Log.e(TAG ,"숨기고");
-                    TEXT.setVisibility(View.VISIBLE);
-                }
-
-            }
-        });
-        */
 
 
     }
@@ -528,4 +497,8 @@ public class CameraListActivity extends AppCompatActivity implements Callback, V
 
 
     }
+
+
 }
+
+

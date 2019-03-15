@@ -21,7 +21,7 @@
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
         android:textStyle="bold"
         android:layout_marginBottom="206dp"
-        android:text="Cloud Cam"
+        android:text="Clip Cam"
         android:textColor="#ffffff" />
 
 
