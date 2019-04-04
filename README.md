@@ -12,8 +12,8 @@ Android_ClipCam with SK CloudCam API 공모전
 ## Contest Prize
 <div>
 <img width="200" src="https://user-images.githubusercontent.com/37185394/55533677-0dc89d80-56ed-11e9-9bb0-562184cb0144.jpg"/>
-<img width="200" src="https://user-images.githubusercontent.com/37185394/55533720-2df85c80-56ed-11e9-84e3-bba2d83e5f9d.jpg"/>
 <img width="200" src="https://user-images.githubusercontent.com/37185394/55533679-0f926100-56ed-11e9-9486-7a6b30a905f8.jpg"/>
+<img width="200" src="https://user-images.githubusercontent.com/37185394/55533720-2df85c80-56ed-11e9-84e3-bba2d83e5f9d.jpg"/>
 </div>
 
 ## Video
