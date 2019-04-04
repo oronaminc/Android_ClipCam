@@ -20,3 +20,6 @@ Android_ClipCam with SK CloudCam API 공모전
 Clip Cam Application : https://www.youtube.com/watch?v=zUBYpvNQ0Ps
 
 Clip Cam Service : https://www.youtube.com/watch?v=2umsT3-t6wg
+
+## Prototype
+https://ovenapp.io/view/37E7yQCX8pFaXYr0Xn9dQCPkizEMMPOi/wsrLa
