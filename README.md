@@ -5,6 +5,9 @@ Android_ClipCam with SK CloudCam API 공모전
 
 1. InitialScreen Activity
 2. Login & Access Activity (Using SK Broadband CloudCam API)
+3. Real-Time Video Showing Activity (Using SK Broadband CloudCam API)
+4. Review Video Showing Activity (Using SK Broadband CloudCam API)
+5. Clip Video Download Activity (Customed func)
 
 ## ScreenShot
 <div>
@@ -23,6 +26,7 @@ Android_ClipCam with SK CloudCam API 공모전
 
 ## Video
 Clip Cam Application : https://www.youtube.com/watch?v=zUBYpvNQ0Ps
+
 Clip Cam Service : https://www.youtube.com/watch?v=2umsT3-t6wg
 
 ## Prototype
@@ -77,7 +81,6 @@ dependencies {
         <activity android:name=".Intro">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
